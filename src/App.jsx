@@ -13,7 +13,7 @@ function App() {
         <Route path="/" element={<Home />}></Route>
         <Route
           path="/catalogo"
-          element={<ItemListContainer greeting={"Nuevos Ingresos"} />}
+          element={<ItemListContainer greeting={"Todas las Categorias"} />}
         ></Route>
         <Route path="/catalogo/:id" element={<ProductsDetail />}></Route>
         <Route path="*" element={<NotFound />}></Route>

@@ -6,7 +6,7 @@ const ItemListContainer = ({ greeting }) => {
   
   return (
     <>
-      <div className="p-10 font-semibold text-3xl">
+      <div className="p-10 font-bold text-3xl">
         <h2>{greeting}</h2>
       </div>
 

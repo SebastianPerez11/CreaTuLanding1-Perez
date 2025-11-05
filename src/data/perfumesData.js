@@ -21,7 +21,7 @@ const perfumes = [
     description: "Una fragancia masculina árabe de estilo intenso, mezcla de especias, oud y madera.",
     notes: ["Oud", "Cuero", "Ámbar", "Vainilla", "Almizcle"],
     size: "100ml",
-    price: 55,
+    price: "240.000",
     imageUrl: LattafaQaedAlFursan,
   },
   {
