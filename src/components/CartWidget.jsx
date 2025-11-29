@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useCart } from "../context/CartContext";
-import IconCart from "../assets/svg/IconCart.svg";
+import IconCart from "/assets/svg/IconCart.svg";
 
 const CartWidget = () => {
   const { totalQuantity } = useCart();
