@@ -1,22 +1,40 @@
-import Navbar from "./components/NavBar";
-import ItemListContainer from "./components/ItemListContainer";
-import Home from "./pages/Home";
 import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/NavBar";
+import Home from "./pages/Home";
+import ItemListContainer from "./components/ItemListContainer";
+import ItemDetailContainer from "./components/ItemDetailContainer";
 import NotFound from "./pages/NotFound";
-import ProductsDetail from "./components/ProductsDetail";
+import Cart from "./components/Cart";
 
 function App() {
   return (
     <>
       <Navbar />
+
       <Routes>
-        <Route path="/" element={<Home />}></Route>
+        {/* Home */}
+        <Route path="/" element={<Home />} />
+
+        {/* Catálogo general */}
         <Route
           path="/catalogo"
-          element={<ItemListContainer greeting={"Todas las Categorias"} />}
-        ></Route>
-        <Route path="/catalogo/:id" element={<ProductsDetail />}></Route>
-        <Route path="*" element={<NotFound />}></Route>
+          element={<ItemListContainer greeting="Todas las Categorías" />}
+        />
+
+        {/* Catálogo por categoría */}
+        <Route
+          path="/catalogo/:categoryId"
+          element={<ItemListContainer greeting="Categoría" />}
+        />
+
+        {/* Detalle de producto */}
+        <Route path="/producto/:id" element={<ItemDetailContainer />} />
+
+        {/* 404 */}
+        <Route path="*" element={<NotFound />} />
+
+        <Route path="/cart" element={<Cart />} />
+
       </Routes>
     </>
   );
